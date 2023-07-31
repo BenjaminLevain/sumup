@@ -79,19 +79,25 @@ Create a dbt project (all platforms):
 dbt init nameofyourproject (here sumup)
 ```
 
+# Technical Test (Take Home Challenge) answers
 
+## General remarks on my work
 
+## Assumptions and Design of my dbt project
 
-### Using the starter project
+## Answerto the questions
 
-Try running the following commands:
-- dbt run
-- dbt test
+### Q1: Top 10 stores per transacted amount
 
+### Q2: Top 10 products sold
 
-### Resources:
-- Learn more about dbt [in the docs](https://docs.getdbt.com/docs/introduction)
-- Check out [Discourse](https://discourse.getdbt.com/) for commonly asked questions and answers
-- Join the [chat](https://community.getdbt.com/) on Slack for live discussions and support
-- Find [dbt events](https://events.getdbt.com) near you
-- Check out [the blog](https://blog.getdbt.com/) for the latest news on dbt's development and best practices
+### Q3: Average transacted amount per store typology and country
+
+### Q4: Percentage of transactions per device type
+
+### Q5: Average time for a store to perform its 5 first transactions
+
+### Approach for sharing with other teams
+
+### Confidence in my data by my stakeholders
+
