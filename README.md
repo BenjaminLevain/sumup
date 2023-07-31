@@ -99,7 +99,7 @@ ss
 #### Result 
 
 Here is the sresult
-![input schema](/Q1_answer.png)
+![Q1_answer](/Q1_answer.png)
 
 
 #### SQL queries 
