@@ -1,9 +1,7 @@
 {% docs __overview__ %}
-# Airbnb pipeline
+# Sumup pipeline
 
 Hey, welcome to our SUm up tech home challenge pipeline documentation!
 
-Here is the schema of our input data:
-![input schema](assets/input_schema.png)
 
 {% enddocs %}
