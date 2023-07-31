@@ -86,11 +86,13 @@ dbt init nameofyourproject (here sumup)
 ## General remarks on my work
 
 - I'm quite happy of what I have done
-- I'm honnest I'm not the experienced guy with dbt because I was doing the transformation layer of the ELT with a python project at Iziwork but I finished the complete-dbt-data-build-tool-bootcamp on udemy platform and after that it was quite intuitive to make the challenge.
-- Thus I'm opened to feedback but dbt is really cool and useful for building a ribust and really developped transformation layer of your data and thus answer precisely the stakeholder questions.
+- I was doing the transformation layer of the ELT with a python project at Iziwork so before doing the test I finished the complete-dbt-data-build-tool-bootcamp on udemy platform and after that it was quite intuitive to make the challenge.
+- Thus I'm opened to feedbacks  but I found dbt  really cool and useful for building a robust and really developped transformation layer of your data and thus answer precisely the stakeholder questions.
   
 
 ## Design of my dbt project
+
+You will find the main explanations of how this repetory is built
 
 ``` seed folder ```
 - The raw data have been loaded into the seed files but I could have also loaded them in a S3 bucket and then called them directly from snowflake
@@ -125,7 +127,7 @@ Here is the result
 ![Q1_answer](/Q1_answer.png)
 
 
-#### SQL queries 
+#### SQL queries associated
 ```sql
 {{ config(
   materialized = 'table',
@@ -153,7 +155,7 @@ Here is the result
 ![Q2_answer](/Q2_answer.png)
 
 
-#### SQL queries 
+#### SQL queries associated
 
 ```sql
 {{ config(
@@ -183,7 +185,7 @@ Here is the result
 ![Q3_answer](/Q3_answer.png)
 
 
-#### SQL queries 
+#### SQL queries associated
 
 ```sql
 {{ config(
@@ -213,7 +215,7 @@ Here is the result
 ![Q4_answer](/Q4_answer.png)
 
 
-#### SQL queries 
+#### SQL queries associated
 
 ```sql
 {{ config(
@@ -242,7 +244,7 @@ Here is the result
 ![Q5_answer](/Q5_answer.png)
 
 
-#### SQL queries 
+#### SQL queries associated
 
 ```sql
 {{ config(
