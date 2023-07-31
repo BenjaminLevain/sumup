@@ -4,6 +4,8 @@ Welcome to my take home challenge. You will find :
 
 # Environment Setup
 
+I decided to indicate how install my dbt project. I took back instructions from the class I have done on the udemy platform and adapted it with my project
+
 ## Snowflake user creation
 Copy these SQL statements into a Snowflake Worksheet, select all and execute them (i.e. pressing the play button).
 
