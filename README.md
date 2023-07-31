@@ -85,15 +85,20 @@ ss
 
 ## General remarks on my work
 
-ss
 
-## Assumptions and Design of my dbt project
 
-ss
+## Design of my dbt project
+
+- 
+
 
 ## Answerto the questions
 
-ss
+### Assumption for queries for answering the questions
+- For all questions, I took only the transactions with the status **accepted**
+- I undestood that the trasaction table was only transactions in euro even if the store country was not in the euro zone but in case I misunderstood I had created also a calculated fied in the transaction table to  know if the country of the transaction was in the Euro zone in order to filter on this field if necssary
+- for Q5 I took only stores who made at least 5 transactions to calculate the average number of days to make five transactions
+
 
 ### Q1: Top 10 stores per transacted amount
 #### Result 
