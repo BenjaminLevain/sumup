@@ -98,7 +98,7 @@ ss
 ### Q1: Top 10 stores per transacted amount
 #### Result 
 
-Here is the sresult
+Here is the result 
 ![Q1_answer](/Q1_answer.png)
 
 
@@ -124,6 +124,14 @@ LIMIT 10
 
 ### Q2: Top 10 products sold
 
+#### Result 
+
+Here is the result 
+![Q2_answer](/Q2_answer.png)
+
+
+#### SQL queries 
+
 ```sql
 {{ config(
   materialized = 'table',
@@ -145,6 +153,14 @@ LIMIT 10
 ```
 
 ### Q3: Average transacted amount per store typology and country
+
+#### Result 
+
+Here is the result 
+![Q3_answer](/Q3_answer.png)
+
+
+#### SQL queries 
 
 ```sql
 {{ config(
@@ -168,6 +184,14 @@ ORDER BY avg_amount desc
 
 ### Q4: Percentage of transactions per device type
 
+#### Result 
+
+Here is the result 
+![Q4_answer](/Q4_answer.png)
+
+
+#### SQL queries 
+
 ```sql
 {{ config(
   materialized = 'table',
@@ -188,6 +212,14 @@ ORDER BY ratio_total_number_of_tansaction desc
 ```
 
 ### Q5: Average time for a store to perform its 5 first transactions
+
+#### Result 
+
+Here is the result 
+![Q5_answer](/Q5_answer.png)
+
+
+#### SQL queries 
 
 ```sql
 {{ config(
