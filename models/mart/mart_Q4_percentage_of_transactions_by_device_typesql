@@ -1,0 +1,16 @@
+{{ config(
+  materialized = 'table',
+) }}
+
+WITH transaction_enriched AS (
+    SELECT * FROM {{ ref('dim_transactions_with_stores_devices') }}
+)
+
+SELECT
+device_type,
+count(distinct transaction_id) as nb_distinct_transactions,
+count(distinct transaction_id)/(select count(*) from SUMUP.DEV.DIM_TRANSACTIONS_WITH_STORES_DEVICES WHERE transaction_status = 'accepted') as ratio_total_number_of_tansaction
+FROM SUMUP.DEV.transaction_enriched
+WHERE transaction_status = 'accepted'
+GROUP BY 1
+ORDER BY ratio_total_number_of_tansaction desc;

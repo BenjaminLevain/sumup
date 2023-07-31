@@ -1,0 +1,80 @@
+version: 2
+
+models:
+  - name: dim_devices_cleaned
+    description: Cleansed table which contains all devices type.
+    columns:
+      
+      - name: device_id
+        description: Primary key for the device
+        tests:
+          - unique
+          - not_null
+        
+      - name: store_id
+        description: The store's id associated to the device. 
+        tests:
+          - not_null
+  
+      - name: device_type
+        description: type of the device. Can be 1 from 5
+        tests:
+          - not_null
+
+  - name: dim_stores_cleaned
+    description: Cleansed table which contains all devices type.
+    columns:
+      
+      - name: store_id
+        description: Primary key for the device
+        tests:
+          - unique
+          - not_null
+        
+      - name: store_creation_date
+        description: The creation date of the store
+        tests:
+          - not_null
+
+      - name: customer_id
+        description: The customer ID of who belongs the store
+        tests:
+          - not_null
+
+  - name: dim_transactions_cleaned
+    description: Cleaned table which contains all the transactions
+    columns:
+      
+      - name: transaction_id
+        description: Primary key for the transaction
+        tests:
+          - unique
+          - not_null
+        
+      - name: device_id
+        description: The device_id. References the device table.
+        tests:
+          - not_null
+
+      - name: transaction_amount
+        description: The amount of the transaction
+        tests:
+          - positive_value
+
+      - name: transaction_status
+        description: define the status of the transaction
+        tests:
+          - accepted_values:
+              values: ['cancelled', 'refused','accepted']
+
+  - name: dim_transactions_with_stores_devices
+    description: Cleaned table which contains all the transactions with enriched informations
+    columns:
+      
+      - name: transaction_id
+        description: Primary key for the transaction
+        tests:
+          - unique
+          - not_null
+        
+      

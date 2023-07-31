@@ -1,0 +1,15 @@
+version: 2
+
+sources:
+  - name: sumup
+    schema: dev
+    tables:
+      - name: transactions
+        identifier: raw_transactions
+
+      - name: devices
+        identifier: raw_devices
+
+      - name: stores
+        identifier: raw_stores
+        
