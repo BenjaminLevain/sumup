@@ -1,4 +1,6 @@
-Welcome to your new dbt project!
+Welcome to my take home challenge. You will find :
+- How to setup the environment to make the project worked
+- How I built this project (design , asumptions , queries , answers to questions)
 
 # Environment Setup
 
@@ -89,7 +91,21 @@ ss
 
 ## Design of my dbt project
 
-- 
+``` seed folder ```
+- The raw data have been loaded into the seed files but I could have also loaded them in a S3 bucket and then called them directly from snowflake
+
+``` model folder ```
+- The models associated to this raw data are int the subfolder ``` src ```
+- The models associated to the cleaned version are in the subfolder ``` dim ```
+- Then I created also a full enriched table of the transaction object called **dim_transactions_with_stores_devices.sql**
+- At least I created some mart views for answering the different business questions located in the subfolder ``` mart ```
+
+  ``` tests and description ```
+- I decided to do generic tests and description in the ``` schema.yml ``` files
+
+``` asset folder ```
+- I putt the screenshot and more generally speaking all the png files in this folder
+
 
 
 ## Answerto the questions
