@@ -5,7 +5,6 @@ Welcome to your new dbt project!
 ## Snowflake user creation
 Copy these SQL statements into a Snowflake Worksheet, select all and execute them (i.e. pressing the play button).
 
-If you see a _Grant partially executed: privileges [REFERENCE_USAGE] not granted._ message when you execute `GRANT ALL ON DATABASE AIRBNB to ROLE transform`, that's just an info message and you can ignore it. 
 
 ```sql
 -- Use an admin role
@@ -26,30 +25,60 @@ CREATE USER IF NOT EXISTS dbt
   MUST_CHANGE_PASSWORD=FALSE
   DEFAULT_WAREHOUSE='COMPUTE_WH'
   DEFAULT_ROLE='transform'
-  DEFAULT_NAMESPACE='AIRBNB.RAW'
+  DEFAULT_NAMESPACE='SUMUP.RAW'
   COMMENT='DBT user used for data transformation';
 GRANT ROLE transform to USER dbt;
 
 -- Create our database and schemas
-CREATE DATABASE IF NOT EXISTS AIRBNB;
-CREATE SCHEMA IF NOT EXISTS AIRBNB.RAW;
+CREATE DATABASE IF NOT EXISTS SUMUP;
+CREATE SCHEMA IF NOT EXISTS SUMUP.RAW;
 
 -- Set up permissions to role `transform`
 GRANT ALL ON WAREHOUSE COMPUTE_WH TO ROLE transform; 
-GRANT ALL ON DATABASE AIRBNB to ROLE transform;
-GRANT ALL ON ALL SCHEMAS IN DATABASE AIRBNB to ROLE transform;
-GRANT ALL ON FUTURE SCHEMAS IN DATABASE AIRBNB to ROLE transform;
-GRANT ALL ON ALL TABLES IN SCHEMA AIRBNB.RAW to ROLE transform;
-GRANT ALL ON FUTURE TABLES IN SCHEMA AIRBNB.RAW to ROLE transform;
+GRANT ALL ON DATABASE SUMUP to ROLE transform;
+GRANT ALL ON ALL SCHEMAS IN DATABASE SUMUP to ROLE transform;
+GRANT ALL ON FUTURE SCHEMAS IN DATABASE SUMUP to ROLE transform;
+GRANT ALL ON ALL TABLES IN SCHEMA SUMUP.RAW to ROLE transform;
+GRANT ALL ON FUTURE TABLES IN SCHEMA SUMUP.RAW to ROLE transform;
 
 ```
 
 ## Snowflake data import
 
-You paste the csv file in the ```seed``` folder and rename them as follow
+You paste the raw csv file in the ```seed``` folder and rename them as follow
 - store.csv as raw_stores.csv
 - device.csv as raw_device.csv
 - transaction.csv as raw_transactions.csv
+
+## dbt installation
+
+Here are the commands we execute in this lesson:
+
+```sh
+create course
+cd course
+virtualenv venv
+. venv/bin/activate
+pip install dbt-snowflake==1.5.0
+which dbt
+```
+
+## dbt setup
+Initialize the dbt profiles folder on Mac/Linux:
+```sh
+mkdir ~/.dbt
+```
+
+Initialize the dbt profiles folder on Windows:
+```sh
+mkdir %userprofile%\.dbt
+```
+
+Create a dbt project (all platforms):
+```sh
+dbt init nameofyourproject (here sumup)
+```
+
 
 
 
