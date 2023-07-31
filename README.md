@@ -97,23 +97,100 @@ ss
 
 ### Q1: Top 10 stores per transacted amount
 
-ss
+```sql
+{{ config(
+  materialized = 'table',
+) }}
+
+WITH transaction_enriched AS (
+    SELECT * FROM {{ ref('dim_transactions_with_stores_devices') }}
+)
+
+SELECT
+store_id,
+store_name,
+sum(transaction_amount) as total_amount
+FROM transaction_enriched
+GROUP BY 1,2
+ORDER BY total_amount desc
+LIMIT 10
+```
 
 ### Q2: Top 10 products sold
 
-ss
+```sql
+WITH raw_hosts AS (
+    SELECT
+        *
+    FROM
+       AIRBNB.RAW.RAW_HOSTS
+)
+SELECT
+    id AS host_id,
+    NAME AS host_name,
+    is_superhost,
+    created_at,
+    updated_at
+FROM
+    raw_hosts
+```
 
 ### Q3: Average transacted amount per store typology and country
 
-ss
+```sql
+WITH raw_hosts AS (
+    SELECT
+        *
+    FROM
+       AIRBNB.RAW.RAW_HOSTS
+)
+SELECT
+    id AS host_id,
+    NAME AS host_name,
+    is_superhost,
+    created_at,
+    updated_at
+FROM
+    raw_hosts
+```
 
 ### Q4: Percentage of transactions per device type
 
-ss
+```sql
+WITH raw_hosts AS (
+    SELECT
+        *
+    FROM
+       AIRBNB.RAW.RAW_HOSTS
+)
+SELECT
+    id AS host_id,
+    NAME AS host_name,
+    is_superhost,
+    created_at,
+    updated_at
+FROM
+    raw_hosts
+```
 
 ### Q5: Average time for a store to perform its 5 first transactions
 
-ss
+```sql
+WITH raw_hosts AS (
+    SELECT
+        *
+    FROM
+       AIRBNB.RAW.RAW_HOSTS
+)
+SELECT
+    id AS host_id,
+    NAME AS host_name,
+    is_superhost,
+    created_at,
+    updated_at
+FROM
+    raw_hosts
+```
 
 ### Approach for sharing with other teams
 
