@@ -83,11 +83,12 @@ dbt init nameofyourproject (here sumup)
 
 # Technical Test (Take Home Challenge) answers
 
-ss
-
 ## General remarks on my work
 
-
+- I'm quite happy of what I have done
+- I'm honnest I'm not the experienced guy with dbt because I was doing the transformation layer of the ELT with a python project at Iziwork but I finished the complete-dbt-data-build-tool-bootcamp on udemy platform and after that it was quite intuitive to make the challenge.
+- Thus I'm opened to feedback but dbt is really cool and useful for building a ribust and really developped transformation layer of your data and thus answer precisely the stakeholder questions.
+  
 
 ## Design of my dbt project
 
@@ -99,12 +100,13 @@ ss
 - The models associated to the cleaned version are in the subfolder ``` dim ```
 - Then I created also a full enriched table of the transaction object called **dim_transactions_with_stores_devices.sql**
 - At least I created some mart views for answering the different business questions located in the subfolder ``` mart ```
-
-  ``` tests and description ```
 - I decided to do generic tests and description in the ``` schema.yml ``` files
 
 ``` asset folder ```
-- I putt the screenshot and more generally speaking all the png files in this folder
+- I put the screenshot and more generally speaking all the png files in this folder
+
+  ``` macro folder ```
+- In the macro folder, I have created a macro which enabled me to make a test on a column ( amount column)
 
 
 
