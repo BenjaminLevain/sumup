@@ -81,23 +81,45 @@ dbt init nameofyourproject (here sumup)
 
 # Technical Test (Take Home Challenge) answers
 
+ss
+
 ## General remarks on my work
+
+ss
 
 ## Assumptions and Design of my dbt project
 
+ss
+
 ## Answerto the questions
+
+ss
 
 ### Q1: Top 10 stores per transacted amount
 
+ss
+
 ### Q2: Top 10 products sold
+
+ss
 
 ### Q3: Average transacted amount per store typology and country
 
+ss
+
 ### Q4: Percentage of transactions per device type
+
+ss
 
 ### Q5: Average time for a store to perform its 5 first transactions
 
+ss
+
 ### Approach for sharing with other teams
 
+ss
+
 ### Confidence in my data by my stakeholders
+
+ss
 
