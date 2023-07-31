@@ -97,7 +97,10 @@ ss
 
 ### Q1: Top 10 stores per transacted amount
 #### Result 
-<img width="558" alt="Q1_answer" src="https://github.com/BenjaminLevain/sumup/assets/36173927/750f58be-0e48-40ff-9f58-9ab28f9516e5">
+
+Here is the sresult
+![input schema](/Q1_answer.png)
+
 
 #### SQL queries 
 ```sql
